@@ -18,5 +18,17 @@
     <ClCompile Include="work16.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="work17.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work18.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work19.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work20.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
