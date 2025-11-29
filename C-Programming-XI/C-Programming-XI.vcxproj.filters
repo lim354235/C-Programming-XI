@@ -30,5 +30,50 @@
     <ClCompile Include="work20.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="work01.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work02.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work03.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work04.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work05.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work06.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work07.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work08.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work09.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work10.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work11.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work12.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work13.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work14.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="work15.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
