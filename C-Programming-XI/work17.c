@@ -23,8 +23,8 @@ int d()
         s = sin(rad);
         c = cos(rad);
 
-        posS = (int)((s + 1) * 25);
-        posC = (int)((c + 1) * 25);
+        posS = ((s + 1) * 25);
+        posC = ((c + 1) * 25);
 
         for (i = 0; i < 51; i++) {
             if (i == posS && i == posC)
