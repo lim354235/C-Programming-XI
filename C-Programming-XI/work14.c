@@ -15,13 +15,13 @@ int main()
 
 void run()
 {
-    double totalUse;    // 총 사용량(m³)
-    int family;         // 세대수
-    double avg;         // 세대당 평균 사용량
-    int highFee;        // 상수도 요금
-    int lowFee;         // 하수도 요금
-    int burden;         // 물이용부담금
-    int total;          // 최종 청구요금
+    double totalUse;    
+    int family;         
+    double avg;         
+    int highFee;       
+    int lowFee;         
+    int burden;         
+    int total;          
 
     printf("수도요금 청구서 출력 program\n\n");
 
@@ -49,13 +49,11 @@ void run()
     printf("청구요금   : %d원\n", total);
 }
 
-/* 세대당 평균 사용량 계산 */
 double calcAvg(double total, int family)
 {
     return total / family;
 }
 
-/* 상수도 요금 계산 (누진 구간 적용) */
 int calcWaterHigh(double avg)
 {
     int fee = 0;
@@ -72,7 +70,6 @@ int calcWaterHigh(double avg)
     return fee;
 }
 
-/* 하수도 요금 계산 */
 int calcWaterLow(double avg)
 {
     int fee = 0;
@@ -87,7 +84,6 @@ int calcWaterLow(double avg)
     return fee;
 }
 
-/* 물이용부담금 (1m³당 130원) */
 int calcBurden(double avg, int family)
 {
     int fee = avg * 130 * family;

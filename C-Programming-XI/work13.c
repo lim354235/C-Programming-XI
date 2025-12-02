@@ -10,7 +10,7 @@ void printResult(int usage, int basic, int usageFee, int elec, int vat, int fund
 
 int main()
 {
-    run();   // main은 실행 함수만 호출
+    run();   
     return 0;
 }
 
@@ -22,28 +22,21 @@ void run()
     printf("전력사용량(kW/h)을 입력하고 Enter> ");
     scanf("%d", &usage);
 
-    // 기본요금
     int basic = getBasicFee(usage);
 
-    // 사용량요금
     int usageFee = getUsageFee(usage);
 
-    // 전기요금 = 기본요금 + 사용량요금
     int elec = basic + usageFee;
 
-    // 부가가치세
     int vat = calcVat(elec);
 
-    // 전력기금
     int fund = calcFund(elec);
 
-    // 청구요금 = 전기요금 + 부가가치세 + 전력기금
     int total = elec + vat + fund;
 
     printResult(usage, basic, usageFee, elec, vat, fund, total);
 }
 
-// 기본요금 계산
 int getBasicFee(int u)
 {
     if (u <= 100) return 390;
@@ -54,7 +47,6 @@ int getBasicFee(int u)
     else return 12350;
 }
 
-// 사용량요금 누진 구간 계산
 int getUsageFee(int u)
 {
     double fee = 0;
@@ -79,14 +71,12 @@ int getUsageFee(int u)
     return (int)fee;
 }
 
-// 부가세(10원 미만 절사)
 int calcVat(int elec)
 {
     int vat = (int)(elec * 0.10);
     return (vat / 10) * 10;
 }
 
-// 전력기금(10원 미만 절사)
 int calcFund(int elec)
 {
     int fund = (int)(elec * 0.037);

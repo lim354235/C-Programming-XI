@@ -1,7 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-// 함수 원형 선언
+
 void startProgram();
 void printByRecurrence(int n);
 void printByGeneral(int n);
@@ -26,9 +26,7 @@ void startProgram()
     printByGeneral(n);
 }
 
-// --------------------------
-// 점화식 : a1 = 1, aₙ = aₙ₋₁ × 2
-// --------------------------
+
 void printByRecurrence(int n)
 {
     int a = 1;
@@ -36,14 +34,12 @@ void printByRecurrence(int n)
     for (int i = 1; i <= n; i++)
     {
         printf("%d ", a);
-        a = a * 2;   // 공비 2
+        a = a * 2;   
     }
     printf("\n");
 }
 
-// --------------------------
-// 일반항 : aₙ = 2^(n-1)
-// --------------------------
+
 void printByGeneral(int n)
 {
     int a = 1;
@@ -51,7 +47,7 @@ void printByGeneral(int n)
     for (int i = 1; i <= n; i++)
     {
         printf("%d ", a);
-        a = a * 2;   // 2^(n-1) 계산
+        a = a * 2;   
     }
     printf("\n");
 }

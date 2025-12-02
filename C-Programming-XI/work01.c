@@ -28,9 +28,7 @@ void startProgram()
     printByGeneral(n);
 }
 
-// --------------------------
-// 점화식: a1=1, a_n = a_(n-1) + 2
-// --------------------------
+
 void printByRecurrence(int n)
 {
     int a = 1;
@@ -43,9 +41,7 @@ void printByRecurrence(int n)
     printf("\n");
 }
 
-// --------------------------
-// 일반항: a_n = 2n - 1
-// --------------------------
+
 void printByGeneral(int n)
 {
     for (int i = 1; i <= n; i++)

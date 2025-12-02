@@ -15,36 +15,30 @@ int main()
 
 void run()
 {
-    int cc;     // 자동차 배기량
-    int years;  // 구입 후 경과년도
+    int cc;    
+    int years; 
 
-    int taxRate;       // cc당 세율
-    double discount;   // 경과년도 할인율
-    int carTax;        // 최종 세금
+    int taxRate;       
+    double discount;   
+    int carTax;       
 
     printf("승용차 세금 계산 program\n\n");
 
-    // 사용자 입력
     printf("승용차의 배기량(cc)을 입력하시오 => ");
     scanf("%d", &cc);
 
     printf("구입 후 경과년수를 입력하시오 => ");
     scanf("%d", &years);
 
-    // 배기량 세율 계산
     taxRate = getTaxRate(cc);
 
-    // 경과년도 할인율 계산
     discount = getDiscountRate(years);
 
-    // 최종 세금 계산
     carTax = calcCarTax(cc, taxRate, discount);
 
-    // 결과 출력
     printResult(cc, years, taxRate, discount, carTax);
 }
 
-// 배기량에 따라 세율을 반환하는 함수
 int getTaxRate(int cc)
 {
     if (cc <= 800)
@@ -61,10 +55,9 @@ int getTaxRate(int cc)
         return 286;
 }
 
-// 경과년수에 따라 할인율을 반환하는 함수
 double getDiscountRate(int years)
 {
-    if (years < 3) return 1.00;    // 100%
+    if (years < 3) return 1.00;   
     else if (years == 3) return 1.00;
     else if (years == 4) return 0.90;
     else if (years == 5) return 0.85;
@@ -74,19 +67,16 @@ double getDiscountRate(int years)
     else if (years == 9) return 0.65;
     else if (years == 10) return 0.60;
     else if (years == 11) return 0.55;
-    else return 0.50;             // 12년 이상
+    else return 0.50;             
 }
 
-// 최종 자동차세 계산 함수
 int calcCarTax(int cc, int taxRate, double discount)
 {
-    // cc × 세율 × 할인율
     double tax = cc * taxRate * discount;
 
-    return (int)tax;   // 원 단위 절사
+    return (int)tax;   
 }
 
-// 결과 출력 함수
 void printResult(int cc, int years, int taxRate, double discount, int finalTax)
 {
     printf("\n배기량  : %d cc\n", cc);

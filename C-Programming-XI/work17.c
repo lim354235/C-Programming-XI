@@ -34,7 +34,7 @@ int d()
             else if (i == posC)
                 printf("C");
             else
-                printf(" ");   // ← 점 대신 공백
+                printf(" ");   
         }
 
         printf("  %3d°\n", angle);

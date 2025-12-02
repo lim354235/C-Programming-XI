@@ -41,7 +41,7 @@ void run()
     payment = calcPayment(baseFee, vat);
 
     printf("\n전체 사용 시간: ");
-    printTime(minutes);   // 시간+분 형식으로 출력
+    printTime(minutes);   
 
     printf("이용 금액(부가세 제외): %d원\n", baseFee);
     printf("부가가치세(10원 미만 절사): %d원\n", vat);
@@ -62,14 +62,13 @@ int calcBaseFee(int minutes, int unitFee)
 
     int fee = block * unitFee;
 
-    // 남은 시간이 5분 이상이면 반값 추가, 5분 미만이면 추가 요금 없음
+   
     if (remain >= 5)
         fee += unitFee / 2;
 
     return fee;
 }
 
-// 부가세 계산 (10% 부과, 10원 미만 절사)
 int calcVat(int baseFee)
 {
     int vat = baseFee * 10 / 100;
@@ -77,17 +76,15 @@ int calcVat(int baseFee)
     return vat;
 }
 
-// 최종 지불 금액 계산 (100원 미만 절사)
 int calcPayment(int baseFee, int vat)
 {
-    int total = baseFee + vat;  // 부가세 포함 금액
+    int total = baseFee + vat;  
 
-    // 100원 미만 절사 (일·십 원 자리 버림)
+    
     total = (total / 100) * 100;
     return total;
 }
 
-// 사용 시간(분)을 "시간 + 분" 형식으로 출력
 void printTime(int minutes)
 {
     int hour = minutes / 60;

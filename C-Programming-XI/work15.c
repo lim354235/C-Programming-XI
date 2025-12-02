@@ -18,7 +18,7 @@ void run()
     double value;
     int unit;
     double cm;
-    double result[10];   // 10개 단위 변환 결과
+    double result[10];  
 
     printf("도량형 환산 프로그램\n\n");
 
@@ -37,7 +37,7 @@ void run()
     printResult(result);
 }
 
-/* 단위별 메뉴 출력 */
+
 void printMenu()
 {
     printf("단위번호\n");
@@ -46,44 +46,42 @@ void printMenu()
     printf("6:마일        7:자        8:간\n");
 }
 
-/* 선택된 단위를 센티미터로 환산 */
+
 double toCentimeter(double value, int unit)
 {
     double cm = 0;
 
     switch (unit)
     {
-    case 0: cm = value; break;                 // cm
-    case 1: cm = value * 100; break;           // m
-    case 2: cm = value * 100000; break;        // km
-    case 3: cm = value * 2.54; break;          // inch
-    case 4: cm = value * 30.48; break;         // ft
-    case 5: cm = value * 91.44; break;         // yard
-    case 6: cm = value * 160934; break;        // mile
-    case 7: cm = value * 30.303; break;        // 자
-    case 8: cm = value * 181.818; break;       // 간
+    case 0: cm = value; break;                 
+    case 1: cm = value * 100; break;           
+    case 2: cm = value * 100000; break;       
+    case 3: cm = value * 2.54; break;        
+    case 4: cm = value * 30.48; break;       
+    case 5: cm = value * 91.44; break;        
+    case 6: cm = value * 160934; break;       
+    case 7: cm = value * 30.303; break;       
+    case 8: cm = value * 181.818; break;      
     default: cm = 0;
     }
 
     return cm;
 }
 
-/* cm 기반으로 10개 단위를 모두 계산 */
 void convertAll(double cm, double result[])
 {
-    result[0] = cm;                   // 센티미터
-    result[1] = cm / 100.0;           // 미터
-    result[2] = cm / 100000.0;        // 킬로미터
-    result[3] = cm / 2.54;            // 인치
-    result[4] = cm / 30.48;           // 피트
-    result[5] = cm / 91.44;           // 야드
-    result[6] = cm / 160934.0;        // 마일
-    result[7] = cm / 30.303;          // 자
-    result[8] = cm / 181.818;         // 간
-    result[9] = cm / 392727.0;        // 리
+    result[0] = cm;                  
+    result[1] = cm / 100.0;           
+    result[2] = cm / 100000.0;       
+    result[3] = cm / 2.54;           
+    result[4] = cm / 30.48;           
+    result[5] = cm / 91.44;          
+    result[6] = cm / 160934.0;        
+    result[7] = cm / 30.303;        
+    result[8] = cm / 181.818;        
+    result[9] = cm / 392727.0;       
 }
 
-/* 결과 출력 */
 void printResult(double result[])
 {
     printf("센티미터 : %10.3f\n", result[0]);

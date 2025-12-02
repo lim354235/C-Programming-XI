@@ -23,9 +23,9 @@ double line_length() {
     printf("선분 ab(=c)의 길이를 입력하세요: ");
     scanf("%lf", &c);
 
-    double C = 180.0 - (A + B);  // A의 각과 B의 각을 이용해 C의 각도를 알아냄
+    double C = 180.0 - (A + B);  
 
-    double a = c * sin(deg2rad(A)) / sin(deg2rad(C));   // 사인코사인 법칙중 A/sinA = B/sinB = C/sinC 인것을 이용하여 선분의 길이를 구함
+    double a = c * sin(deg2rad(A)) / sin(deg2rad(C));   
 
     printf("선분 a(BC)의 길이: %lf\n", a);
 
@@ -33,5 +33,5 @@ double line_length() {
 }
 
 double deg2rad(double deg) {
-    return deg * PI / 180.0;    // 각도 라디안 변환
+    return deg * PI / 180.0;  
 }

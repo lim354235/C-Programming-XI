@@ -23,7 +23,7 @@ void run()
     if (prev[0] == '0')
         return;
 
-    // 0입력시 종료
+   
     while (1)
     {
         printPrompt();
@@ -50,14 +50,12 @@ void run()
     }
 }
 
-/* 끝말잇기 규칙 검사 */
 int checkMatch(char prev[], char now[])
 {
     int last = strlen(prev) - 1;
     return (prev[last] == now[0]);
 }
 
-/* 출력 예시와 완전히 동일한 입력 안내 문구 */
 void printPrompt()
 {
     printf("단어를 입력하고 Enter> ");
